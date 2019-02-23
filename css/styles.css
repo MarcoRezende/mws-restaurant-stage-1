@@ -54,6 +54,7 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+  display: table;
 }
 nav h1 {
   margin: auto;
@@ -72,6 +73,10 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     width: calc(50% - 80px);
+}
+.nav-item {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Display list items side by side */
