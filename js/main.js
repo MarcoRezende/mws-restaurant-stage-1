@@ -157,6 +157,8 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  li.setAttribute('role', 'listitem')
+  li.setAttribute('tabindex', '0')
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -166,6 +168,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute("id", restaurant.id)
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -180,6 +183,8 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
+
+  li.setAttribute('aria-labelledby', restaurant.id)
 
   return li
 }
@@ -209,6 +214,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
-
-const list = document.getElementById('restaurants-list');
-const imgs = list.getElementsByTagName('img')
