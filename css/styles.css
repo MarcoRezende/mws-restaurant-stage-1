@@ -48,6 +48,16 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 0;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
 
 /* ====================== Grid ====================== */
 
@@ -152,7 +162,7 @@ nav h1 a {
 .filter-options {
   display: table;
   width: 100%;
-  background-color: #3397DB;
+  background-color: #252831;
   align-items: center;
   padding: 10px 0 ;
 }
