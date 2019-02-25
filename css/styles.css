@@ -309,7 +309,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -325,9 +325,9 @@ nav h1 a {
   color: #666;
 }
 
-/* ====================== Restaurant Details ====================== */
+/* ====================== Media Queries ====================== */
 
-@media screen and (max-width: 1022px) {
+@media screen and (min-width: 929px) and (max-width: 1022px) {
   #restaurants-list li {
     width: 220px;
   }
@@ -336,6 +336,27 @@ nav h1 a {
   }
   #restaurants-list p {
     font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .inside #map-container {
+    height: 100%;
+    position: relative;
+    top: 145px;
+    width: 100%;
+    z-index: 0;
+  }
+  .inside #map {
+    height: 400px;
+    width: 100%;
+    z-index: 0;
+  }
+  #footer {
+    width: 100%;
+  }
+  #breadcrumb {
+    width: 100%;
   }
 }
 
