@@ -17,11 +17,12 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1 class="nav-item"><a href="/">Restaurant Reviews</a></h1>
+      <h1 class="nav-item"><a href="/" aria-labelledby="home">Restaurant Reviews</a></h1>
     </nav>
+    <a class="skip-link" href="#title">Skip to main content</a>
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
+      <li id="home"><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -44,11 +45,16 @@
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
         <p id="restaurant-address"></p>
-        <table id="restaurant-hours"></table>
+
+        <div tabindex="0" aria-labelledby="title">
+          <h1 id="title">Business Hours</h1>
+          <a class="skip-link" href="#reviews-container">Skip Business Hours</a>
+          <table id="restaurant-hours" tabindex="0" role="grid"></table>
+        </div>
       </section>
       <!-- end restaurant -->
       <!-- Beginning reviews -->
-      <section id="reviews-container">
+      <section id="reviews-container" tabindex="0" aria-labelledby="title-reviews">
         <ul id="reviews-list"></ul>
       </section>
        <!-- End reviews -->
