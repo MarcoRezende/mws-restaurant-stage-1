@@ -125,7 +125,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 50%;
 }
 .nav-item {
   display: table-cell;
@@ -341,7 +341,7 @@ tr:nth-child(even) {
   overflow: hidden;
   padding: 20px 20px 20px;
   position: relative;
-  width: 85%;
+  width: 90%;
 }
 #reviews-list h1 {
   font-size: 16pt;
