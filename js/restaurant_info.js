@@ -6,6 +6,14 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
+  if (window.matchMedia('(max-width: 960px)').matches) {
+
+    document.getElementById('review-content').classList.remove('col-6');
+    document.getElementById('review-content').classList.add('col-12');
+
+    document.getElementById('map-content').classList.remove('col-6');
+    document.getElementById('map-content').classList.add('col-12');
+  }
 });
 
 /**
@@ -192,3 +200,23 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+window.addEventListener('resize', function(event){
+  if (window.matchMedia('(max-width: 960px)').matches) {
+
+    document.getElementById('review-content').classList.remove('col-6');
+    document.getElementById('review-content').classList.add('col-12');
+
+    document.getElementById('map-content').classList.remove('col-6');
+    document.getElementById('map-content').classList.add('col-12');
+
+  } else {
+
+    document.getElementById('review-content').classList.remove('col-12');
+    document.getElementById('review-content').classList.add('col-6');
+
+    document.getElementById('map-content').classList.remove('col-12');
+    document.getElementById('map-content').classList.add('col-6');
+
+  }
+});
