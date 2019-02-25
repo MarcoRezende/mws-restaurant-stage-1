@@ -314,12 +314,27 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px 20px 20px;
   position: relative;
   width: 85%;
 }
+#reviews-list h1 {
+  font-size: 16pt;
+  font-weight: bolder;
+  display: inline-block;
+}
+#reviews-list .date {
+  font-size: 10pt;
+  float: right;
+}
+#reviews-list .rating {
+  font-size: 12pt;
+  display: block;
+  padding: 0 0 15px;
+}
 #reviews-list li p {
   margin: 0 0 10px;
+  font-size: 10pt;
 }
 #restaurant-hours td {
   color: #666;
