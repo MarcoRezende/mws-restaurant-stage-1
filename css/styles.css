@@ -203,10 +203,10 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
+  margin: 10px;
   padding: 0 20px 15px;
   text-align: center;
-  width: 170px;
+  width: 200px;
   max-width: 100%;
 }
 #restaurants-list .restaurant-img {
@@ -372,7 +372,7 @@ tr:nth-child(even) {
     width: 220px;
   }
   #restaurants-list li h1 {
-    font-size: 10pt;
+    font-size: 8pt;
   }
   #restaurants-list p {
     font-size: 12pt;
@@ -404,11 +404,14 @@ tr:nth-child(even) {
   #restaurants-list li h1 {
     font-size: 12pt;
   }
+  #restaurants-list p {
+    font-size: 10pt;
+  }
 }
 
 @media screen and (min-width: 656px) and (max-width: 794px) {
   #restaurants-list li {
-    padding: 0 10px 5px;
+    padding: 0 5px 5px;
     width: 250px;
   }
   #restaurants-list p {
