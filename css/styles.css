@@ -365,7 +365,7 @@ tr:nth-child(even) {
   color: #000;
 }
 
-/* ====================== Media Queries ====================== */
+/* ====================== Media Queries Home ====================== */
 
 @media screen and (min-width: 929px) and (max-width: 1022px) {
   #restaurants-list li {
@@ -376,24 +376,6 @@ tr:nth-child(even) {
   }
   #restaurants-list p {
     font-size: 12pt;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .inside #map-container {
-    height: 100%;
-    position: relative;
-    top: 145px;
-    width: 100%;
-    z-index: 0;
-  }
-  .inside #map {
-    height: 400px;
-    width: 100%;
-    z-index: 0;
-  }
-  #breadcrumb {
-    width: 100%;
   }
 }
 
@@ -416,6 +398,14 @@ tr:nth-child(even) {
   }
   #restaurants-list p {
     font-size: 10pt;
+  }
+}
+@media screen and (max-width: 560px) {
+  .filter-options select {
+    width: 94%;
+  }
+  .filter-options select:last-child {
+    margin-top: 10px;
   }
 }
 
@@ -458,5 +448,33 @@ tr:nth-child(even) {
 @media screen and (max-width: 355px) {
   #restaurants-list li {
     width: 200px;
+  }
+}
+
+/* ====================== Media Queries Reviews====================== */
+
+@media screen and (max-width: 960px) {
+  .inside #map-container {
+    background: none;
+    height: 100%;
+    position: relative;
+    top: 145px;
+    width: 100%;
+    z-index: 0;
+    margin: 0 0 20px 0;
+  }
+  .inside #map {
+    height: 400px;
+    width: 100%;
+    z-index: 0;
+  }
+  #breadcrumb {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #restaurant-name {
+    font-size: 16pt;
   }
 }
