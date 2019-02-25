@@ -116,6 +116,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+    row.setAttribute('tabindex', '0')
 
     const day = document.createElement('td');
     day.innerHTML = key;
@@ -125,6 +126,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     const time = document.createElement('td');
     time.innerHTML = operatingHours[key];
     row.appendChild(time);
+
 
     hours.appendChild(row);
   }
@@ -137,6 +139,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.setAttribute('id', 'title-reviews')
   container.appendChild(title);
 
   if (!reviews) {
@@ -174,6 +177,8 @@ createReviewHTML = (review) => {
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
   li.appendChild(comments);
+
+  li.setAttribute('tabindex', '0')
 
   return li;
 }
