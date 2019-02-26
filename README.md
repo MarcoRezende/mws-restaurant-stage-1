@@ -2,9 +2,11 @@
 
 Através desta aplicação você terá acesso a diversas avaliações de usuários, horário de funcionamento e localização em tempo real. O site é totalmente responsivo e, o mais importante, acessível à todos.
 
-## Acesse
+## Demo
 
-Acesse agora clicando [aqui](https://marcorezende.github.io/mws-restaurant-stage-1/)
+![Screenshot](screenshot-home.PNG)
+
+![Screenshot](sscreenshot-review.PNG)
 
 ## Dependências
 
