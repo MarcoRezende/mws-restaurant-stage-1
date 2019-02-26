@@ -6,7 +6,7 @@ Através desta aplicação você terá acesso a diversas avaliações de usuári
 
 ![Screenshot](screenshot-home.PNG)
 
-![Screenshot](sscreenshot-review.PNG)
+![Screenshot](screenshot-review.PNG)
 
 ## Dependências
 
