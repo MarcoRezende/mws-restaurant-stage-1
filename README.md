@@ -4,7 +4,7 @@ Através desta aplicação você terá acesso a diversas avaliações de usuári
 
 ## Acesse
 
-Acesse agora clicando [aqui]()
+Acesse agora clicando [aqui](https://marcorezende.github.io/mws-restaurant-stage-1/)
 
 ## Dependências
 
