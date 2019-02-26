@@ -17,14 +17,19 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1 class="nav-item"><a href="/" aria-labelledby="home">Restaurant Reviews</a></h1>
-    </nav>
-    <a class="skip-link" href="#title">Skip to main content</a>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+      <div class="header-container">
+        <h1 class="nav-item">
+          <a href="/" aria-labelledby="home">Restaurant Reviews</a>
+        </h1>
+      </div>
+      <!-- Beginning breadcrumb -->
+    <ul id="breadcrumb" role="navigation" aria-label="Breadcrumb">
       <li id="home"><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
+    </nav>
+    <a class="skip-link" href="#title">Skip to main content</a>
+
     <!-- End nav -->
   </header>
   <!-- End header -->
@@ -34,20 +39,20 @@
     <!-- Beginning map -->
     <div class="col-6 a" id="map-content">
       <section id="map-container">
-        <div id="map"></div>
+        <div id="map" aria-label="Restaurant Map" role="application"></div>
       </section>
     </div>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <div class="col-6" id="review-content">
       <section id="restaurant-container" >
-        <h1 id="restaurant-name"></h1>
+        <h2 id="restaurant-name"></h2>
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
         <p id="restaurant-address"></p>
 
         <div tabindex="0" aria-labelledby="title">
-          <h1 id="title">Business Hours</h1>
+          <h3 id="title">Business Hours</h3>
           <a class="skip-link" href="#reviews-container">Skip Business Hours</a>
           <table id="restaurant-hours" tabindex="0" role="grid"></table>
         </div>
