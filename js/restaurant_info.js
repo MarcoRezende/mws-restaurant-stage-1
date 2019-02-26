@@ -160,23 +160,33 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  const divNameAndDate = document.createElement('div');
+  const divReview = document.createElement('div');
+
+  divNameAndDate.className = 'name-date';
+  divReview.className = 'comment';
+
   const name = document.createElement('h1');
   name.innerHTML = review.name;
-  li.appendChild(name);
+  divNameAndDate.appendChild(name);
+  li.appendChild(divNameAndDate);
 
   const date = document.createElement('span');
   date.innerHTML = review.date;
-  date.className = 'date'
-  li.appendChild(date);
+  date.className = 'date';
+  divNameAndDate.appendChild(date);
+  li.appendChild(divNameAndDate);
 
   const rating = document.createElement('span');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.className = 'rating'
-  li.appendChild(rating);
+  divReview.appendChild(rating);
+  li.appendChild(divReview);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
-  li.appendChild(comments);
+  divReview.appendChild(comments);
+  li.appendChild(divReview);
 
   li.setAttribute('tabindex', '0')
 

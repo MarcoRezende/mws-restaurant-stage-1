@@ -175,7 +175,7 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin: 0 20px 10px;
 }
 .filter-options select {
   display: table-cell;
@@ -206,7 +206,6 @@ nav h1 a {
   border-radius: 5px;
   font-family: Arial,sans-serif;
   margin: 10px;
-  padding: 0 20px 15px;
   text-align: center;
   width: 220px;
   max-width: 100%;
@@ -216,6 +215,12 @@ nav h1 a {
   display: block;
   margin: 0;
   width: 100%;
+}
+.container-image {
+  width: 100%;
+}
+.container-info {
+  padding: 0 20px 15px;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -336,28 +341,45 @@ tr:nth-child(even) {
 }
 #reviews-list li {
   background-color: #fff;
-  border: 2px solid #f3f3f3;
+  box-shadow: 14px 16px 44px -4px rgba(0,0,0,.3);
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 20px 20px 20px;
   position: relative;
   width: 90%;
+  border-radius: 30px 0 30px 0;
+}
+.name-date {
+  background-color: #282828;
+  padding: 20px 20px 0;
+}
+.comment {
+  padding: 20px 20px 20px;
 }
 #reviews-list h1 {
   font-size: 16pt;
   font-weight: bolder;
   display: inline-block;
+  color: #fff;
 }
 #reviews-list .date {
   font-size: 10pt;
   float: right;
+  color: #fff;
+  padding-top: 10px;
 }
 #reviews-list .rating {
   font-size: 12pt;
   display: block;
   padding: 0 0 15px;
+  background-color: #f58500;
+  width: 90px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bolder;
+  margin-bottom: 15px;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -395,19 +417,21 @@ tr:nth-child(even) {
 
 @media screen and (min-width: 656px) and (max-width: 794px) {
   #restaurants-list li {
-    padding: 0 5px 5px;
     width: 250px;
   }
   #restaurants-list p {
-    font-size: 10pt;
+    font-size: 11pt;
   }
 }
 @media screen and (max-width: 560px) {
   .filter-options select {
-    width: 94%;
+    width: 95%;
   }
   .filter-options select:last-child {
     margin-top: 10px;
+  }
+  .filter-options h2 {
+    text-align: center;
   }
 }
 
@@ -477,6 +501,7 @@ tr:nth-child(even) {
 
 @media screen and (max-width: 420px) {
   #restaurant-name {
-    font-size: 16pt;
+    font-size: 14pt;
+    width: 90%;
   }
 }

@@ -157,6 +157,12 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  const divImage = document.createElement('div');
+  const divInfo = document.createElement('div');
+
+  divImage.className = 'container-image'
+  divInfo.className = 'container-info'
+
   li.setAttribute('role', 'listitem')
   li.setAttribute('tabindex', '0')
 
@@ -164,25 +170,30 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.alt = restaurant.alt;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.append(image);
+  divImage.append(image);
+  li.append(divImage);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
   name.setAttribute("id", restaurant.id)
-  li.append(name);
+  divInfo.append(name)
+  li.append(divInfo);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  divInfo.append(neighborhood)
+  li.append(divInfo);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  divInfo.append(address)
+  li.append(divInfo);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  divInfo.append(more)
+  li.append(divInfo);
 
   li.setAttribute('aria-labelledby', restaurant.id)
 
@@ -204,7 +215,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
-addMarkersToMap = (restaurants = self.restaurants) => {
+/* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
@@ -213,4 +224,5 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
     self.markers.push(marker);
   });
-}
+} */
+
